@@ -59,6 +59,7 @@ header h1 {
 
 .intro-text {
     flex: 1;
+    justify;
     max-width: 60%; /* Ajusta el ancho máximo del texto */
 }
 
