@@ -1,0 +1,268 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e;
+    color: #cfcfcf;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #4b4b4b;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.social-buttons {
+    margin-top: 1em;
+}
+
+.social-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0 0.5em;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.social-button:hover {
+    color: #edeae9;
+}
+
+/* Sección About Me */
+#intro {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto dentro de la .intro-text */
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+#intro img {
+    width: 30%;
+    height: auto;
+    margin-right: 30px; /* Separación de la imagen */
+}
+
+.intro-text {
+    flex: 1;
+    max-width: 60%; /* Ajusta el ancho máximo del texto */
+}
+
+.intro-text h2 {
+    font-size: 1.8em;
+    font-family: 'Georgia', serif;
+    color: #eae6df;
+    margin-top: 0;
+    text-align: left;
+}
+
+.intro-text p {
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+/* Estilos de la sección Projects */
+#projects {
+    margin: 2em 0;
+    color: #eae6df;
+    position: relative; /* Para posicionar los controles dentro del contenedor */
+    background-color: #333333; /* Color de fondo para resaltar */
+    padding: 2em 0; /* Espacio adicional alrededor del contenido */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+
+#projects h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    color: #eeece9;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo del carrusel */
+    margin: 0 auto; /* Centra el carrusel */
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 400px; /* Ajusta la altura máxima de las imágenes */
+    object-fit: cover; /* Asegura que las imágenes llenen el área del contenedor */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    max-width: 90%; /* Evita que el texto se salga del contenedor */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1.5em;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #4b4b4b;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    margin-bottom: 0.5em;
+}
+
+.footer-links a {
+    color: #cfcfcf;
+    text-decoration: none;
+    margin: 0 0.5em;
+    font-size: 1.2em;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de cambio de idioma */
+.language-toggle {
+    position: fixed; /* Cambia a fixed para que siempre esté visible */
+    top: 10px;
+    right: 10px;
+    background-color: transparent; /* Fondo transparente por defecto */
+    color: #ffffff; /* Texto blanco para buen contraste */
+    border: 1px solid #cccccc; /* Borde gris claro */
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+.language-toggle:hover {
+    background-color: #ffffff; /* Fondo blanco en hover */
+    color: #333333; /* Texto oscuro en hover para buen contraste */
+    border-color: #999999; /* Borde gris más oscuro en hover */
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    #intro {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1em;
+        padding-bottom: 60px; /* Espacio adicional para el botón */
+    }
+
+    #intro img {
+        width: 70%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+
+    .intro-text {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .language-toggle {
+        top: auto; /* Quita la distancia desde el top */
+        bottom: 70px; /* Coloca el botón un poco más arriba para no tapar el contenido */
+        right: 10px; /* Mantiene la distancia desde el borde derecho */
+        font-size: 14px; /* Ajusta el tamaño de fuente */
+        padding: 8px 16px; /* Ajusta el tamaño del padding */
+    }
+}
+
+.glow-text {
+    font-size: 1.5em; /* Smaller text size */
+    color: #ffffff; /* White text color */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline from the link */
+    transition: text-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
+}
+
+.glow-text {
+    font-size: 1.5em; /* Smaller text size */
+    color: #ffffff; /* White text color */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline from the link */
+    transition: text-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
+}
+
+.glow-text:hover {
+    text-shadow: 0 0 5px #ffffff, /* White shadow around the text */
+                 0 0 10px #ffffff, /* Additional glow */
+                 0 0 15px #ffffff, 
+                 0 0 20px #00ffff, /* Blue color for the glow */
+                 0 0 30px #00ffff,
+                 0 0 40px #00ffff,
+                 0 0 50px #00ffff;
+}
