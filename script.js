@@ -43,5 +43,5 @@ function moveSlide(step) {
     showSlide(currentSlide);
 }
 
-// Inicializa el carrusel mostrando el primer slide
+// Initialize the carousel showing the first slide
 showSlide(currentSlide);
