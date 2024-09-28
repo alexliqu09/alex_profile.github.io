@@ -2,23 +2,17 @@ let isEnglish = true;
 
 function toggleLanguage() {
     const footerText = document.getElementById('footer-text');
-    const introParagraphEn = document.getElementById('intro-paragraph-en');
-    const introParagraphEs = document.getElementById('intro-paragraph-es');
     const languageToggle = document.querySelector('.language-toggle');
     const enTexts = document.querySelectorAll('.en');
     const esTexts = document.querySelectorAll('.es');
 
     if (isEnglish) {
         footerText.textContent = footerText.getAttribute('data-lang-es');
-        introParagraphEn.style.display = 'none';
-        introParagraphEs.style.display = 'block';
         languageToggle.textContent = 'English';
         enTexts.forEach(el => el.style.display = 'none');
         esTexts.forEach(el => el.style.display = 'block');
     } else {
         footerText.textContent = footerText.getAttribute('data-lang-en');
-        introParagraphEn.style.display = 'block';
-        introParagraphEs.style.display = 'none';
         languageToggle.textContent = 'Español';
         enTexts.forEach(el => el.style.display = 'block');
         esTexts.forEach(el => el.style.display = 'none');
