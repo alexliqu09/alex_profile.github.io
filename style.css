@@ -57,6 +57,17 @@ header h1 {
     margin-right: 30px; /* Separación de la imagen */
 }
 
+#cv-link {
+    color: #ADD8E6; /* Color azul claro (Light Blue) */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+#cv-link:hover {
+    color: #87CEFA; /* Color más oscuro al pasar el mouse (Light Sky Blue) */
+    text-decoration: underline; /* Agrega subrayado al pasar el mouse */
+}
+
+
 .intro-text {
     flex: 1;
     justify;
