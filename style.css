@@ -1,280 +1,314 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #2e2e2e;
-    color: #cfcfcf;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
 }
 
-/* Estilos del encabezado */
-header {
-    background-color: #4b4b4b;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-    position: relative;
+body{
+
+    background:#08131f;
+    color:white;
+
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
+/*================ HEADER ================*/
+
+header{
+
+    background:linear-gradient(135deg,#07111c,#102846,#0d3b74);
+
+    padding:50px;
+
+    text-align:center;
+
+    border-bottom:3px solid #1e88ff;
+
 }
 
-.social-buttons {
-    margin-top: 1em;
+header h1{
+
+    font-size:48px;
+    font-weight:bold;
+
 }
 
-.social-button {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-    margin: 0 0.5em;
-    display: inline-block;
-    transition: color 0.3s;
+header h3{
+
+    color:#4da3ff;
+
+    margin-top:10px;
+
 }
 
-.social-button:hover {
-    color: #edeae9;
+header p{
+
+    margin-top:8px;
+
+    color:#d8d8d8;
+
 }
 
-/* Sección About Me */
-#intro {
-    display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    text-align: center; /* Centra el texto dentro de la .intro-text */
-    flex-wrap: wrap;
-    margin-top: 2em;
+.social-buttons{
+
+    margin-top:25px;
+
 }
 
-#intro img {
-    width: 30%;
-    height: auto;
-    margin-right: 30px; /* Separación de la imagen */
+.social-button{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:26px;
+
+    margin:0 12px;
+
+    transition:.3s;
+
 }
 
-#cv-link {
-    color: #ADD8E6; /* Color azul claro (Light Blue) */
-    text-decoration: none; /* Quita el subrayado */
+.social-button:hover{
+
+    color:#2f9cff;
+
 }
 
-#cv-link:hover {
-    color: #87CEFA; /* Color más oscuro al pasar el mouse (Light Sky Blue) */
-    text-decoration: underline; /* Agrega subrayado al pasar el mouse */
+/*================ HERO ================*/
+
+#hero{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:40px;
+
+    padding:40px;
+
+    flex-wrap:wrap;
+
 }
 
+.profile{
 
-.intro-text {
-    flex: 1;
-    justify;
-    max-width: 60%; /* Ajusta el ancho máximo del texto */
+    width:220px;
+
+    border-radius:15px;
+
+    border:4px solid #2f9cff;
+
 }
 
-.intro-text h2 {
-    font-size: 1.8em;
-    font-family: 'Georgia', serif;
-    color: #eae6df;
-    margin-top: 0;
-    text-align: left;
+.hero-center{
+
+    max-width:700px;
+
 }
 
-.intro-text p {
-    font-size: 1em;
-    line-height: 1.6em;
-    margin-bottom: 1em;
-    text-align: left;
+.contact{
+
+    margin-top:20px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
 }
 
-/* Estilos de la sección Projects */
-#projects {
-    margin: 2em 0;
-    color: #eae6df;
-    position: relative; /* Para posicionar los controles dentro del contenedor */
-    background-color: #333333; /* Color de fondo para resaltar */
-    padding: 2em 0; /* Espacio adicional alrededor del contenido */
-    border-radius: 8px; /* Bordes redondeados */
+/*================ DASHBOARD ================*/
+
+.dashboard{
+
+    width:95%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:25px;
+
+    margin-bottom:50px;
+
 }
 
+/*================ CARDS ================*/
 
-#projects h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 1em;
-    font-family: 'Times New Roman', Times, serif;
-    color: #eeece9;
-    text-shadow: 2px 2px 4px #000000;
+.card{
+
+    background:#0f2236;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    border:1px solid #1d4d82;
+
+    transition:.3s;
+
 }
 
-.carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    max-width: 600px; /* Ajusta el ancho máximo del carrusel */
-    margin: 0 auto; /* Centra el carrusel */
+.card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#2f9cff;
+
 }
 
-.carousel-item {
-    min-width: 100%;
-    transition: transform 0.5s ease-in-out;
-    position: relative;
+.card h2{
+
+    color:#3ca3ff;
+
+    margin-bottom:18px;
+
+    font-size:28px;
+
 }
 
-.carousel-item img {
-    width: 100%;
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-height: 400px; /* Ajusta la altura máxima de las imágenes */
-    object-fit: cover; /* Asegura que las imágenes llenen el área del contenedor */
+.card p{
+
+    line-height:1.8;
+
+    color:#dddddd;
+
 }
 
-.carousel-caption {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1em;
-    max-width: 90%; /* Evita que el texto se salga del contenedor */
+.card ul{
+
+    margin-left:18px;
+
 }
 
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 1em;
-    cursor: pointer;
-    z-index: 1000;
-    font-size: 1.5em;
-    border-radius: 50%;
+.card li{
+
+    margin:10px 0;
+
 }
 
-.carousel-control.prev {
-    left: 10px;
+/*================ TAGS ================*/
+
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
 }
 
-.carousel-control.next {
-    right: 10px;
+.tags span{
+
+    background:#173554;
+
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    border:1px solid #2f9cff;
+
 }
 
-.carousel-control:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+/*================ BUTTONS ================*/
+
+#cv-link{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    background:#1d8fff;
+
+    color:white;
+
+    padding:12px 25px;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+
 }
 
-/* Estilos del pie de página */
-footer {
-    background-color: #4b4b4b;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+#cv-link:hover{
+
+    background:#45a4ff;
+
 }
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.language-toggle{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    background:#1d8fff;
+
+    color:white;
+
+    border:none;
+
+    border-radius:30px;
+
+    padding:12px 25px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
 }
 
-.footer-links {
-    margin-bottom: 0.5em;
+/*================ FOOTER ================*/
+
+footer{
+
+    background:#06101a;
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#bbbbbb;
+
 }
 
-.footer-links a {
-    color: #cfcfcf;
-    text-decoration: none;
-    margin: 0 0.5em;
-    font-size: 1.2em;
+/*================ MOBILE ================*/
+
+@media(max-width:900px){
+
+#hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+.contact{
+
+    justify-content:center;
+
 }
 
-/* Botón de cambio de idioma */
-.language-toggle {
-    position: fixed; /* Cambia a fixed para que siempre esté visible */
-    top: 10px;
-    right: 10px;
-    background-color: transparent; /* Fondo transparente por defecto */
-    color: #ffffff; /* Texto blanco para buen contraste */
-    border: 1px solid #cccccc; /* Borde gris claro */
-    border-radius: 25px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    z-index: 1000; /* Asegura que esté sobre otros elementos */
+header h1{
+
+    font-size:34px;
+
 }
 
-.language-toggle:hover {
-    background-color: #ffffff; /* Fondo blanco en hover */
-    color: #333333; /* Texto oscuro en hover para buen contraste */
-    border-color: #999999; /* Borde gris más oscuro en hover */
-    transform: scale(1.05);
-}
-
-@media (max-width: 600px) {
-    #intro {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 1em;
-        padding-bottom: 60px; /* Espacio adicional para el botón */
-    }
-
-    #intro img {
-        width: 70%;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 1em;
-    }
-
-    .intro-text {
-        max-width: 100%;
-        margin-left: 0;
-    }
-
-    .language-toggle {
-        top: auto; /* Quita la distancia desde el top */
-        bottom: 70px; /* Coloca el botón un poco más arriba para no tapar el contenido */
-        right: 10px; /* Mantiene la distancia desde el borde derecho */
-        font-size: 14px; /* Ajusta el tamaño de fuente */
-        padding: 8px 16px; /* Ajusta el tamaño del padding */
-    }
-}
-
-.glow-text {
-    font-size: 1.5em; /* Smaller text size */
-    color: #ffffff; /* White text color */
-    font-weight: bold; /* Bold text */
-    text-decoration: none; /* Remove underline from the link */
-    transition: text-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
-}
-
-.glow-text {
-    font-size: 1.5em; /* Smaller text size */
-    color: #ffffff; /* White text color */
-    font-weight: bold; /* Bold text */
-    text-decoration: none; /* Remove underline from the link */
-    transition: text-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
-}
-
-.glow-text:hover {
-    text-shadow: 0 0 5px #ffffff, /* White shadow around the text */
-                 0 0 10px #ffffff, /* Additional glow */
-                 0 0 15px #ffffff, 
-                 0 0 20px #00ffff, /* Blue color for the glow */
-                 0 0 30px #00ffff,
-                 0 0 40px #00ffff,
-                 0 0 50px #00ffff;
 }
