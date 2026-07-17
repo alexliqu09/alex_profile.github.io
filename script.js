@@ -1,41 +1,27 @@
 let isEnglish = true;
 
 function toggleLanguage() {
-    const footerText = document.getElementById('footer-text');
-    const languageToggle = document.querySelector('.language-toggle');
-    const enTexts = document.querySelectorAll('.en');
-    const esTexts = document.querySelectorAll('.es');
 
-    if (isEnglish) {
-        footerText.textContent = footerText.getAttribute('data-lang-es');
-        languageToggle.textContent = 'English';
-        enTexts.forEach(el => el.style.display = 'none');
-        esTexts.forEach(el => el.style.display = 'block');
-    } else {
-        footerText.textContent = footerText.getAttribute('data-lang-en');
-        languageToggle.textContent = 'Español';
-        enTexts.forEach(el => el.style.display = 'block');
-        esTexts.forEach(el => el.style.display = 'none');
-    }
+    const footerText = document.getElementById("footer-text");
 
-    isEnglish = !isEnglish;
-}
+    const languageToggle = document.querySelector(".language-toggle");
 
-let currentSlide = 0;
-
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-item');
-    if (index >= slides.length) currentSlide = 0;
-    if (index < 0) currentSlide = slides.length - 1;
-    slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(${-currentSlide * 100}%)`;
+    document.querySelectorAll(".en").forEach(e=>{
+        e.style.display=isEnglish?"none":"block";
     });
-}
 
-function moveSlide(step) {
-    currentSlide += step;
-    showSlide(currentSlide);
-}
+    document.querySelectorAll(".es").forEach(e=>{
+        e.style.display=isEnglish?"block":"none";
+    });
 
-// Initialize the carousel showing the first slide
-showSlide(currentSlide);
+    footerText.textContent=isEnglish
+        ?footerText.dataset.langEs
+        :footerText.dataset.langEn;
+
+    languageToggle.textContent=isEnglish
+        ?"English"
+        :"Español";
+
+    isEnglish=!isEnglish;
+
+}
